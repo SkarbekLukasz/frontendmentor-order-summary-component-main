@@ -16,10 +16,126 @@
 
 body {
   font-family: "Red Hat Display", sans-serif;
+  background-color: var(--pale-blue);
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: calc(100vh - 1px);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 body p {
   font-size: 16px;
+  color: var(--desaturated-blue);
+}
+
+button {
+  margin-top: 1.5rem;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+h1 {
+  color: var(--dark-blue);
+}
+
+h3 {
+  font-size: 16px;
+  color: --dark-blue;
+  font-weight: 900;
+}
+
+a {
+  color: var(--bright-blue);
+  font-weight: 700;
+  flex-basis: 1;
+  font-size: 0.8rem;
+  opacity: 1;
+}
+
+a:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+.container {
+  background-color: white;
+  max-width: 27.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+  margin: 2rem;
+  overflow: hidden;
+}
+
+.order {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+}
+
+.plan {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.6rem;
+}
+
+.plancost {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 1;
+}
+
+.plancost img {
+  margin-right: 1rem;
+}
+
+#checkout {
+  background-color: var(--bright-blue);
+  border: 0;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  font-weight: 700;
+  box-shadow: 0 10px 15px 0 hsla(245, 75%, 52%, 0.25);
+}
+
+#checkout:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+#cancel {
+  background-color: white;
+  border: 0;
+  color: var(--desaturated-blue);
+  font-weight: 700;
+}
+
+#cancel:hover {
+  color: var(--dark-blue);
+  cursor: pointer;
+}
+
+#annual {
+  font-weight: 900;
+  color: var(--dark-blue);
 }
 
 .attribution {
@@ -30,5 +146,8 @@ body p {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 1440px) {
+@media screen (min-width: 450px) {
+  .container {
+    min-width: 30rem;
+  }
 }
